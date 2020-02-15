@@ -28,3 +28,34 @@ ul.nav.navbar-nav li {
 .onboarding > .navbar {
   background: #14171a;
 }
+
+/* Home-hero */
+
+.home-hero {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url('./images/home-hero.jpg');
+  background-position: top right;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 5rem;
+}
+
+.home-hero > h1 {
+  font-size: 3rem;
+  text-shadow: 0 1px 8px #2a2d2f;
+}
+
+.home-hero > .btn {
+  margin-top: 1rem;
+  font-weight: 500;
+}
