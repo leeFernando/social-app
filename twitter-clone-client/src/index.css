@@ -1,5 +1,30 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  background-color: #e6ecf0;
+}
+
+/* Nav */
+.navbar {
+  margin-bottom: 1rem;
+}
+
+.navbar a {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navbar .container-fluid {
+  padding: 0 0.3rem;
+}
+
+ul.nav.navbar-nav li {
+  margin: 0 0.5rem;
+}
+
+.onboarding > .navbar {
+  background: #14171a;
 }

@@ -8,17 +8,18 @@ class Navbar extends Component {
       <nav className='navbar navbar-expand'>
         <div className='container-fluid'>
           <Link to='/' className='navbar-brand'>
-            <img src='' alt='Twitter Home' />
+            <i className='fa fa-2x fa-twitter'></i>
           </Link>
+
+          <ul className='nav navbar-nav navbar-right'>
+            <li>
+              <Link to='/signup'>Sign up</Link>
+            </li>
+            <li>
+              <Link to='/signin'>Sign in</Link>
+            </li>
+          </ul>
         </div>
-        <ul className='nav navbar-nav navbar-right'>
-          <li>
-            <Link to='/signup'>Sign up</Link>
-          </li>
-          <li>
-            <Link to='/signin'>Sign in</Link>
-          </li>
-        </ul>
       </nav>
     );
   }
