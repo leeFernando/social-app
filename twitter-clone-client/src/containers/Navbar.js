@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { logout } from '../store/action/auth';
 
 class Navbar extends Component {
+  logout = e => {
+    e.preventDefault();
+    this.props.logout();
+  };
+
   render() {
+    const { currentUser } = this.props;
     return (
       <nav className='navbar navbar-expand'>
         <div className='container-fluid'>
@@ -11,14 +18,27 @@ class Navbar extends Component {
             <i className='fa fa-2x fa-twitter'></i>
           </Link>
 
-          <ul className='nav navbar-nav navbar-right'>
-            <li>
-              <Link to='/signup'>Sign up</Link>
-            </li>
-            <li>
-              <Link to='/signin'>Sign in</Link>
-            </li>
-          </ul>
+          {currentUser.isAuthenticated ? (
+            <ul className='nav navbar-nav navbar-right'>
+              <li>
+                <Link to={`/users/${currentUser.user.id}/tweets/new`}>
+                  New Tweet
+                </Link>
+              </li>
+              <li>
+                <a onClick={this.logout}>Sign out</a>
+              </li>
+            </ul>
+          ) : (
+            <ul className='nav navbar-nav navbar-right'>
+              <li>
+                <Link to='/signup'>Sign up</Link>
+              </li>
+              <li>
+                <Link to='/signin'>Sign in</Link>
+              </li>
+            </ul>
+          )}
         </div>
       </nav>
     );
@@ -31,4 +51,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, null)(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);
