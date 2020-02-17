@@ -6,6 +6,7 @@ body {
 /* Nav */
 .navbar {
   margin-bottom: 1rem;
+  z-index: 1;
 }
 
 .navbar a {
@@ -38,7 +39,6 @@ ul.nav.navbar-nav li {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   background-image: url('./images/home-hero.jpg');
   background-position: top right;
   background-size: cover;
