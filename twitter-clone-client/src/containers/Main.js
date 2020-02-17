@@ -5,6 +5,8 @@ import Homepage from '../components/Homepage';
 import AuthForm from '../components/AuthForm';
 import { authUser } from '../store/action/auth';
 import { removeError } from '../store/action/errors';
+import TweetForm from '../components/TweetForm';
+import withAuth from '../hocs/withAuth';
 
 const Main = props => {
   const { authUser, removeError, currentUser, errors } = props;
@@ -45,6 +47,7 @@ const Main = props => {
             />
           )}
         />
+        <Route path='/users/:id/tweets/new' component={withAuth(TweetForm)} />
       </Switch>
     </div>
   );
