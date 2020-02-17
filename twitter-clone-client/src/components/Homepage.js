@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import TweetTimeline from './TweetTimeline';
 
 const Homepage = ({ currentUser }) => {
   if (!currentUser.isAuthenticated)
@@ -11,7 +12,11 @@ const Homepage = ({ currentUser }) => {
         </Link>
       </div>
     );
-  return <div>Welcome!!</div>;
+  return (
+    <div>
+      <TweetTimeline />
+    </div>
+  );
 };
 
 export default Homepage;

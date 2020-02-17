@@ -1,10 +1,12 @@
 import React from 'react';
 import TweetList from '../containers/TweetList';
 
-export default const TweetTimeline = props => {
+const TweetTimeline = props => {
   return (
-    <div className="row">
+    <div className='row'>
       <TweetList />
     </div>
-  )
-}
+  );
+};
+
+export default TweetTimeline;
