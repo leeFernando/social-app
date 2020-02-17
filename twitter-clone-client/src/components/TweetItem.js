@@ -16,8 +16,6 @@ const TweetItem = ({
       <img
         src={profileImageUrl || DefaultProfileImg}
         alt={username}
-        height='100'
-        width='100'
         className='timeline-image'
       />
       <div className='tweet-area'>
@@ -28,11 +26,7 @@ const TweetItem = ({
           </Moment>
         </span>
         <p>{text}</p>
-        {isCurrentUser && (
-          <a onClick={deleteTweet} className='btn btn-danger'>
-            delete
-          </a>
-        )}
+        {isCurrentUser && <i onClick={deleteTweet} className='fa fa-times'></i>}
       </div>
     </li>
   </div>

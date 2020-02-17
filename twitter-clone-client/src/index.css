@@ -1,5 +1,6 @@
 body {
   background-color: #e6ecf0;
+  height: 100vh;
 }
 
 /* Nav */
@@ -60,14 +61,77 @@ ul.nav.navbar-nav li {
   font-weight: 500;
 }
 
-/* TweetList */
+/* TweetItem */
 
 #tweets .list-group-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 7px 20px 12px;
+  border-radius: 10px;
+  margin: 2px 0;
+  height: 95px;
+}
+
+#tweets .list-group-item img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#tweets .list-group-item .tweet-area {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0.8rem;
+}
+
+#tweets .list-group-item .tweet-area p {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+#tweets .list-group-item .tweet-area .fa-times {
+  color: rgb(216, 44, 44);
+  font-size: 18px;
+  position: absolute;
+  right: 11px;
+  top: 7px;
+  opacity: 0;
+}
+
+#tweets .list-group-item .tweet-area .fa-times:hover {
+  color: rgb(241, 73, 73);
 }
 
 #tweets:not(.no-hover) .list-group-item:hover {
   background-color: #e6ecf0;
+}
+
+#tweets:not(.no-hover) .list-group-item:hover .fa-times {
+  transition-duration: 0.3s;
+  opacity: 1;
+}
+
+/* User Aside */
+
+.panel .panel-body {
+  margin-top: 0.5rem;
+}
+
+.panel .panel-body .id-thumbnail {
+  font-size: 1.4vw;
+  text-align: center;
+}
+
+/* Auth Form */
+
+.auth-form label,
+input {
+  margin: 2px auto;
+}
+
+.auth-form label {
+  display: block;
+  text-align: left;
+  padding-left: 2%;
+  margin-top: 8px;
 }

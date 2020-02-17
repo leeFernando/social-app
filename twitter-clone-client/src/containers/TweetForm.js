@@ -23,11 +23,11 @@ class TweetForm extends Component {
             {errors.message && (
               <div className='alert alert-danger'>{errors.message}</div>
             )}
-            <h2>Add New Tweet</h2>
+            <h2 className='my-4'>Add New Tweet</h2>
             <textarea
               rows='3'
               onChange={e => this.setState({ tweet: e.target.value })}
-              className='form-control'
+              className='form-control rounded mt-4 mb-3'
             >
               {this.state.tweet}
             </textarea>

@@ -23,7 +23,7 @@ class TweetList extends Component {
     ));
     return (
       <div className='row col-sm-8'>
-        <div className='offset-1 col-sm-10'>
+        <div className='offset-1 col-sm-10 tweet-list'>
           <ul className='list-group' id='tweets'>
             {tweetList}
           </ul>

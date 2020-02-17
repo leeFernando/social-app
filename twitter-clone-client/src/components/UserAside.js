@@ -10,6 +10,7 @@ const UserAside = ({ username, profileImageUrl }) => (
           alt={username}
           className='img-thumbnail'
         />
+        <div className='id-thumbnail'>@{username}</div>
       </div>
     </div>
   </aside>

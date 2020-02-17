@@ -47,12 +47,12 @@ export default class AuthForm extends Component {
 
     return (
       <div className='row justify-content-md-center text-center'>
-        <div className='col-md-6'>
+        <div className='col-md-6 col-lg-4 auth-form'>
           <form action='' onSubmit={this.handleSubmit}>
             {errors.message && (
               <div className='alert alert-danger'>{errors.message}</div>
             )}
-            <h2>{heading}</h2>
+            <h2 className='my-4'>{heading}</h2>
             <label htmlFor='email'>Email:</label>
             <input
               type='email'
@@ -93,7 +93,10 @@ export default class AuthForm extends Component {
                 />
               </div>
             )}
-            <button type='submit' className='btn btn-primary btn-lg btn-block'>
+            <button
+              type='submit'
+              className='mt-5 btn btn-primary btn-lg btn-block'
+            >
               {buttonText}
             </button>
           </form>
