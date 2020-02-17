@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchTweets } from '../store/action/tweets';
+import { fetchTweets, deleteTweet } from '../store/action/tweets';
 import TweetItem from '../components/TweetItem';
 
 class TweetList extends Component {
@@ -9,7 +9,7 @@ class TweetList extends Component {
   }
 
   render() {
-    const { tweets } = this.props;
+    const { tweets, deleteTweet } = this.props;
     let tweetList = tweets.map(t => (
       <TweetItem
         key={t._id}
@@ -17,6 +17,7 @@ class TweetList extends Component {
         text={t.text}
         username={t.user.username}
         profileImageUrl={t.user.profileImageUrl}
+        deleteTweet={() => deleteTweet(t.user._id, t._id)}
       />
     ));
     return (
@@ -37,4 +38,6 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { fetchTweets })(TweetList);
+export default connect(mapStateToProps, { fetchTweets, deleteTweet })(
+  TweetList,
+);

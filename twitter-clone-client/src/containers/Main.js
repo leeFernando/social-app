@@ -5,7 +5,7 @@ import Homepage from '../components/Homepage';
 import AuthForm from '../components/AuthForm';
 import { authUser } from '../store/action/auth';
 import { removeError } from '../store/action/errors';
-import TweetForm from '../components/TweetForm';
+import TweetForm from './TweetForm';
 import withAuth from '../hocs/withAuth';
 
 const Main = props => {
