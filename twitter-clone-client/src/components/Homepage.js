@@ -12,9 +12,10 @@ const Homepage = ({ currentUser }) => {
         </Link>
       </div>
     );
+  const { username, profileImageUrl } = currentUser.user;
   return (
     <div>
-      <TweetTimeline />
+      <TweetTimeline username={username} profileImageUrl={profileImageUrl} />
     </div>
   );
 };
