@@ -9,7 +9,7 @@ class TweetList extends Component {
   }
 
   render() {
-    const { tweets, deleteTweet } = this.props;
+    const { tweets, currentUser, deleteTweet } = this.props;
     let tweetList = tweets.map(t => (
       <TweetItem
         key={t._id}
@@ -17,6 +17,7 @@ class TweetList extends Component {
         text={t.text}
         username={t.user.username}
         profileImageUrl={t.user.profileImageUrl}
+        isCurrentUser={currentUser === t.user._id}
         deleteTweet={() => deleteTweet(t.user._id, t._id)}
       />
     ));
@@ -35,6 +36,7 @@ class TweetList extends Component {
 function mapStateToProps(state) {
   return {
     tweets: state.tweets,
+    currentUser: state.currentUser.user.id,
   };
 }
 
