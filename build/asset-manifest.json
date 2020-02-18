@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/social-app/static/css/main.a5bf228c.chunk.css",
+    "main.js": "/social-app/static/js/main.ff1e2368.chunk.js",
+    "main.js.map": "/social-app/static/js/main.ff1e2368.chunk.js.map",
+    "runtime-main.js": "/social-app/static/js/runtime-main.aebf90bc.js",
+    "runtime-main.js.map": "/social-app/static/js/runtime-main.aebf90bc.js.map",
+    "static/css/2.00d68556.chunk.css": "/social-app/static/css/2.00d68556.chunk.css",
+    "static/js/2.cf2f0ef8.chunk.js": "/social-app/static/js/2.cf2f0ef8.chunk.js",
+    "static/js/2.cf2f0ef8.chunk.js.map": "/social-app/static/js/2.cf2f0ef8.chunk.js.map",
+    "index.html": "/social-app/index.html",
+    "precache-manifest.d10ce1a81016b80fa63d71b2e01aebc6.js": "/social-app/precache-manifest.d10ce1a81016b80fa63d71b2e01aebc6.js",
+    "service-worker.js": "/social-app/service-worker.js",
+    "static/css/2.00d68556.chunk.css.map": "/social-app/static/css/2.00d68556.chunk.css.map",
+    "static/css/main.a5bf228c.chunk.css.map": "/social-app/static/css/main.a5bf228c.chunk.css.map",
+    "static/js/2.cf2f0ef8.chunk.js.LICENSE.txt": "/social-app/static/js/2.cf2f0ef8.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/social-app/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/index.css": "/social-app/static/media/home-hero.4ac192dc.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aebf90bc.js",
+    "static/css/2.00d68556.chunk.css",
+    "static/js/2.cf2f0ef8.chunk.js",
+    "static/css/main.a5bf228c.chunk.css",
+    "static/js/main.ff1e2368.chunk.js"
+  ]
+}

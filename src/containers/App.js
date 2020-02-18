@@ -26,7 +26,7 @@ if (localStorage.jwtToken) {
 
 const App = () => (
   <Provider store={store}>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div className='onboarding'>
         <Navbar />
         <Main />
