@@ -7,7 +7,8 @@ export function setTokenHeader(token) {
 
 export function apiCall(method, path, data) {
   return new Promise((resolve, reject) => {
-    return axios[method](path, data)
+    const url = process.env.REACT_APP_API_URI + path;
+    return axios[method](url, data)
       .then(res => {
         return resolve(res.data);
       })
